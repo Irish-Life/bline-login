@@ -12,6 +12,20 @@ use Symfony\Component\HttpFoundation\JsonResponse;
  */
 class BlineLoginController extends ControllerBase {
 
+
+  /**
+   * Session.
+   *
+   * @return string
+   *   Return session token.
+   */
+  public function session() {
+    $response['data'] = 'g5ehdzBLRW_hkuNFwu12XTTVlTQaci2w0J7TKXXSsKQ';
+    $response['method'] = 'GET';
+
+    return new JsonResponse( $response );
+  }
+
   /**
    * Auth.
    *
@@ -19,15 +33,9 @@ class BlineLoginController extends ControllerBase {
    *   Return Hello string.
    */
   public function auth( Request $request ) {
-    $response['data'] = 'Some test data to return';
+
+    $response['data'] = $request->getContent();
     $response['method'] = 'POST';
-
-    return new JsonResponse( $response );
-  }
-
-  public function session() {
-    $response['data'] = 'g5ehdzBLRW_hkuNFwu12XTTVlTQaci2w0J7TKXXSsKQ';
-    $response['method'] = 'GET';
 
     return new JsonResponse( $response );
   }

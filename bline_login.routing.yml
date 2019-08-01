@@ -11,7 +11,7 @@ bline_login.get:
 bline_login.post:
   path: '/bline_login/auth'
   defaults:
-    _controller: '\Drupal\bline_login\Controller\BlineLoginController::session'
+    _controller: '\Drupal\bline_login\Controller\BlineLoginController::auth'
     _title: 'auth'
   methods: [POST]
   requirements:

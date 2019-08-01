@@ -94,7 +94,17 @@ class BlineLoginResource extends ResourceBase {
         return new ModifiedResourceResponse($payload, 200);
     }
 
-    public function get($payload) {
+    /**
+     * Responds to POST requests.
+     *
+     *
+     * @return \Drupal\rest\ModifiedResourceResponse
+     *   The HTTP response object.
+     *
+     * @throws \Symfony\Component\HttpKernel\Exception\HttpException
+     *   Throws exception expected.
+     */
+    public function get() {
 
       // You must to implement the logic of your REST Resource here.
       // Use current user after pass authentication to validate access.
