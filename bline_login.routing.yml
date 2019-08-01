@@ -1,0 +1,18 @@
+
+bline_login.get:
+  path: '/bline_login/session'
+  defaults:
+    _controller: '\Drupal\bline_login\Controller\BlineLoginController::session'
+    _title: 'session'
+  methods: [GET]
+  requirements:
+    _permission: 'access content'
+
+bline_login.post:
+  path: '/bline_login/auth'
+  defaults:
+    _controller: '\Drupal\bline_login\Controller\BlineLoginController::session'
+    _title: 'auth'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'

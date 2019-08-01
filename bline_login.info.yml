@@ -1,0 +1,5 @@
+name: 'Bline Login'
+type: module
+description: 'A module to manage the bline login integration.'
+core: 8.x
+package: 'Custom'
