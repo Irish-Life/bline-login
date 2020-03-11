@@ -1,0 +1,5 @@
+services:
+  bline_login:
+    class: Drupal\bline_login\EventSubscriber\BlineLoginSubscriber
+    tags:
+      - {name: event_subscriber}
